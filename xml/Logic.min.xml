@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<script classes="" title="Example Script" brand1="" script1="">
+    <agent brand="Genius PPT" name="Test User" status="Demonstration"></agent>
+    <panels number="9">
+        <hide element="Holding" triggerID="initiate"></hide>
+        <show element="SmallBrandingPanel" triggerID="initiate"></show>
+        <show element="LoginPanel" triggerID="initiate"></show>
+        <rules command="startTimer" triggerID="initiate"></rules>
+        <panel classes="col-xs-12" columns="2" name="SmallBranding" rows="1" title="" state="chromeless"
+               initial="hide"></panel>
+        <panel classes="col-xs-12" columns="1" name="Login" title="Log In" rows="5" state="" initial="hide"></panel>
+        <panel classes="col-xs-12" columns="1" name="ScriptSelect" title="Script Select" rows="4"
+               initial="hide"></panel>
+        <panel classes="col-xs-7" columns="2" name="MainInformation" title="Main Information" rows="8" state=""
+               initial="hide"></panel>
+        <panel classes="col-xs-5" columns="2" name="CallOutcomes" title="Call Outcomes" rows="1" state=""
+               initial="hide"></panel>
+        <panel classes="col-xs-5" columns="1" name="SalesOutcomes" title="Sales Outcome" rows="2" state=""
+               initial="hide"></panel>
+        <panel classes="col-xs-5" columns="3" name="NonSaleOutcomes" title="Non Sales Outcomes" row="5" state=""
+               initial="hide"></panel>
+        <panel classes="col-xs-12" columns="2" name="Comments" title="Comments" rows="1" state=""
+               initial="hide"></panel>
+    </panels>
+    <elements>
+        <Button classes="btn-default col-xs-2 col-xs-offset-2 callControl" forPanel="callControl" id="transferCall"
+                name="Transfer call" state=" ">
+            <rules command="callTransfer" triggerID="transferCall"></rules>
+        </Button>
+        <Button classes="btn-default col-xs-2 callControl" forPanel="callControl" id="holdCall"
+                name="Place Call on hold" state=" ">
+            <rules command="holdCall" triggerID="holdCall"></rules>
+        </Button>
+        <Button classes="btn-default col-xs-2 callControl" forPanel="callControl" id="endCall" name="End call" state="">
+            <rules command="endCall" triggerID="endCall"></rules>
+        </Button>
+        <Button classes="btn-default col-xs-2 callControl" forPanel="callControl" id="makeNewCall" name="Make New Call"
+                state="disabled">
+            <rules command="newCall" triggerID="makeNewCall"></rules>
+        </Button>
+        <image altText="Webhelp logo" classes="img-responsive col-xs-1 col-xs-offset-5 " forPanel="SmallBrandingRow1"
+               id="" src="images/Webhelp.jpg"></image>
+        <image altText="Vodafone logo" classes="img-responsive col-xs-1 " forPanel="SmallBrandingRow1" id=""
+               src="images/Vodafone.png"></image>
+        <inputField classes="col-xs-2" forPanel="LoginRow2" id="agentName" label="AgentName" prefix="Agent Name"
+                    prefixClasses="col-xs-2 col-xs-5" type="text"></inputField>
+        <inputField classes="col-xs-2" forPanel="LoginRow3" id="agentPassword" label="agentPassword" prefix="Password"
+                    prefixClasses="col-xs-2 col-xs-5" type="password"></inputField>
+        <inputField classes="col-xs-2" forPanel="LoginRow4" id="extension" label="extension" prefix="Extension"
+                    prefixClasses="col-xs-2 col-xs-5" type="number"></inputField>
+        <Button classes="btn-success col-xs-2 col-xs-offset-2" id="LoginSubmit" forPanel="LoginRow5" name="Login"
+                state="">
+            <hide element="LoginPanel" triggerID="LoginSubmit"></hide>
+            <show element="ScriptSelectPanel" triggerID="LoginSubmit"></show>
+        </Button>
+        <htmlOutput classes="text-center" forPanel="ScriptSelectRow2" id=""
+                    outputHTML='&lt;h3 class="text-center"&gt;Test User&lt;/h3&gt;'></htmlOutput>
+        <dropdown classes="col-xs-2" forPanel="ScriptSelectRow3" id="ScriptChoice" prefix="Select Campaign:"
+                  prefixClasses="col-xs-2">
+            <option choice="Administrator" dropdown="ScriptChoice" id="1"></option>
+            <option choice="Webhelp_P2P_Test" dropdown="ScriptChoice" id="2"></option>
+            <option choice="Webhelp_P2P_OB" dropdown="ScriptChoice" id="3"></option>
+            <option choice="Webhelp_Samsung_Test" dropdown="ScriptChoice" id="4"></option>
+            <option choice="In_Webhelp_Samsung" dropdown="ScriptChoice" id="5"></option>
+            <option choice="IB_Webhelp_P2P" dropdown="ScriptChoice" id="6"></option>
+            <option choice="IB_Webhelp_Broadband" dropdown="ScriptChoice" id="7"></option>
+            <option choice="Webhelp_P2P_HV_OB" dropdown="ScriptChoice" id="8"></option>
+            <option choice="IB_Webhelp_P2P_HV" dropdown="ScriptChoice" id="9"></option>
+            <option choice="In_Webhelp_SMS" dropdown="ScriptChoice" id="10"></option>
+            <option choice="STGCheck_STG6_1" dropdown="ScriptChoice" id="11"></option>
+            <option choice="STGCheck_STG6_2" dropdown="ScriptChoice" id="12"></option>
+            <option choice="STGCheck_STG6_3" dropdown="ScriptChoice" id="13"></option>
+            <option choice="STGCheck_STG6_4" dropdown="ScriptChoice" id="14"></option>
+            <option choice="Webhelp_SMS" dropdown="ScriptChoice" id="15"></option>
+            <option choice="Webhelp_Vodafone_Test" dropdown="ScriptChoice" id="16"></option>
+            <option choice="Webhelp_Vodafone_4G" dropdown="ScriptChoice" id="17"></option>
+            <option choice="Webhelp_Vodafone_Bill_Doctor2" dropdown="ScriptChoice" id="18"></option>
+            <option choice="Webhelp_Test_Drive_Data" dropdown="ScriptChoice" id="19"></option>
+            <option choice="Webhelp_Migration" dropdown="ScriptChoice" id="20"></option>
+            <option choice="Webhelp_Migration_Test" dropdown="ScriptChoice" id="21"></option>
+            <option choice="In_Webhelp_Migration" dropdown="ScriptChoice" id="22"></option>
+            <option choice="Webhelp_Migration_Collections" dropdown="ScriptChoice" id="23"></option>
+            <option choice="Webhelp_Migration_Collections_Test" dropdown="ScriptChoice" id="24"></option>
+            <option choice="IN_Webhelp_Migration_Collections" dropdown="ScriptChoice" id="25"></option>
+            <option choice="Webhelp_Pro_Retention_NPS" dropdown="ScriptChoice" id="26"></option>
+            <option choice="Webhelp_Pro_Retention_NPS_Test" dropdown="ScriptChoice" id="27"></option>
+            <option choice="In_Webhelp_Pro_Retention_NPS" dropdown="ScriptChoice" id="28"></option>
+            <option choice="Webhelp_Pro_Retention_SA" dropdown="ScriptChoice" id="29"></option>
+            <option choice="In_Webhelp_Pro_Retention_SA" dropdown="ScriptChoice" id="30"></option>
+            <option choice="Webhelp_Household" dropdown="ScriptChoice" id="31"></option>
+            <option choice="Webhelp_Household_Smart_R" dropdown="ScriptChoice" id="32"></option>
+            <option choice="Webhelp_Household_Test" dropdown="ScriptChoice" id="33"></option>
+            <option choice="In_Webhelp_Household" dropdown="ScriptChoice" id="34"></option>
+            <option choice="In_Webhelp_Household_Smart_R" dropdown="ScriptChoice" id="35"></option>
+            <option choice="Webhelp_Household_Support" dropdown="ScriptChoice" id="36"></option>
+            <option choice="In_Webhelp_Household_Support" dropdown="ScriptChoice" id="37"></option>
+            <option choice="Webhelp_SmarterSales" dropdown="ScriptChoice" id="38"></option>
+            <option choice="In_Webhelp_SmarterSales" dropdown="ScriptChoice" id="39"></option>
+            <option choice="Webhelp_Early_Life_Sales" dropdown="ScriptChoice" id="40"></option>
+            <option choice="In_Webhelp_Early_Life_Sales" dropdown="ScriptChoice" id="41"></option>
+            <option choice="Webhelp_Household_ELS_HBB" dropdown="ScriptChoice" id="42"></option>
+            <option choice="In_Webhelp_Household_ELS_HBB" dropdown="ScriptChoice" id="43"></option>
+            <option choice="Webhelp_Vodafone_Selections" dropdown="ScriptChoice" id="44"></option>
+            <option choice="In_Webhelp_Vodafone_Collections" dropdown="ScriptChoice" id="45"></option>
+            <option choice="Webhelp_Vodafone_Collections_2" dropdown="ScriptChoice" id="46"></option>
+            <option choice="In_Webhelp_Vodafone_Collections_2" dropdown="ScriptChoice" id="47"></option>
+            <option choice="In_Webhelp_VF_OB_Retentions" dropdown="ScriptChoice" id="48"></option>
+            <option choice="Webhelp_VF_OB_Retentions" dropdown="ScriptChoice" id="49"></option>
+            <option choice="Webhelp_VF_OB_Retentions_Test" dropdown="ScriptChoice" id="50"></option>
+            <option choice="In_Webhelp_OB_Pro_Retention_Other" dropdown="ScriptChoice" id="51"></option>
+            <option choice="Webhelp_OB_Pro_Retention_Other" dropdown="ScriptChoice" id="52"></option>
+            <option choice="In_Webhelp_OB_Retention_CPW" dropdown="ScriptChoice" id="53"></option>
+            <option choice="Webhelp_OB_Retention_CPW" dropdown="ScriptChoice" id="54"></option>
+            <option choice="Webhelp_OB_Retention_CPW_Test" dropdown="ScriptChoice" id="55"></option>
+            <option choice="In_Webhelp_OB_Pro_Retention_UPG" dropdown="ScriptChoice" id="56"></option>
+            <option choice="Webhelp_OB_Pro_Retention_UPG" dropdown="ScriptChoice" id="57"></option>
+        </dropdown>
+        <Button classes="btn-success col-xs-2 col-xs-offset-2" id="ScriptSubmit" forPanel="ScriptSelectRow4"
+                name="Select Script" state="">
+            <hide element="ScriptSelectPanel" triggerID="ScriptSubmit"></hide>
+            <show element="MainInformationPanel" triggerID="ScriptSubmit"></show>
+            <show element="CallOutcomesPanel" triggerID="ScriptSubmit"></show>
+            <show element="CommentsPanel" triggerID="ScriptSubmit"></show>
+        </Button>
+        <Button classes="col-xs-1 col-xs-offset-10" forPanel="ScriptSelectRow5" id="ToLogin" name="Back" state="">
+            <hide element="ScriptSelectPanel" triggerID="ToLogin"></hide>
+            <show element="LoginPanel" triggerID="ToLogin"></show>
+        </Button>
+        <inputField classes="col-xs-3" forPanel="MainInformationRow1" id="Account" prefix="Account"
+                    prefixClasses="col-xs-3" type="text"></inputField>
+        <Button classes="btn-danger btn-lg col-xs-3 col-xs-offset-3" id="AnswerMachine" forPanel="MainInformationRow1"
+                name="ANSWER MACHINE" state="">
+            <registerOutcome message="Answer Machine" triggerID="AnswerMachine"></registerOutcome>
+        </Button>
+        <inputField classes="col-xs-3" forPanel="MainInformationRow1" id="URN" prefix="URN" prefixClasses="col-xs-3"
+                    type="text"></inputField>
+        <inputField classes="col-xs-3" forPanel="MainInformationRow2" id="Title" prefix="Title" prefixClasses="col-xs-3"
+                    type="text"></inputField>
+        <inputField classes="col-xs-3" forPanel="MainInformationRow2" id="TelNumber1" prefix="Tel Number 1"
+                    prefixClasses="col-xs-3" type="text"></inputField>
+        <inputField classes="col-xs-3" forPanel="MainInformationRow2" id="Forename" prefix="Forename"
+                    prefixClasses="col-xs-3" type="text"></inputField>
+        <inputField classes="col-xs-3" forPanel="MainInformationRow2" id="TelNumber2" prefix="Tel Number 2"
+                    prefixClasses="col-xs-3" type="text"></inputField>
+        <inputField classes="col-xs-3" forPanel="MainInformationRow2" id="Surname" prefix="Surname"
+                    prefixClasses="col-xs-3" type="text"></inputField>
+        <inputField classes="col-xs-3" forPanel="MainInformationRow2" id="TelNumber3" prefix="Tel Number 3"
+                    prefixClasses="col-xs-3" type="text"></inputField>
+        <inputField classes="col-xs-3" forPanel="MainInformationRow2" id="Address1" prefix="Address 1"
+                    prefixClasses="col-xs-3" type="text"></inputField>
+        <inputField classes="col-xs-3" forPanel="MainInformationRow2" id="NoDialled" prefix="No Dialled"
+                    prefixClasses="col-xs-3" type="text"></inputField>
+        <inputField classes="col-xs-3" forPanel="MainInformationRow2" id="Postcode" prefix="Postcode"
+                    prefixClasses="col-xs-3" type="text"></inputField>
+        <inputField classes="col-xs-3" forPanel="MainInformationRow3" id="ARBalance" prefix="AR Balance"
+                    prefixClasses="col-xs-3" type="text"></inputField>
+        <inputField classes="col-xs-3" forPanel="MainInformationRow4" id="LastPaymentDate" prefix="Last Payment Date"
+                    prefixClasses="col-xs-3" type="text"></inputField>
+        <Button classes="btn-success btn-lg col-xs-3 col-xs-offset-1" id="SaleOutcome" forPanel="CallOutcomesRow1"
+                name="Sale Outcomes" state="">
+            <hide element="CallOutcomesPanel" triggerID="SaleOutcome"></hide>
+            <show element="SalesOutcomesPanel" triggerID="SaleOutcome"></show>
+        </Button>
+        <Button classes="btn-danger btn-lg col-xs-3 col-xs-offset-1" id="NonSaleOutcome" forPanel="CallOutcomesRow1"
+                name="Non Sale Outcome" state="">
+            <hide element="CallOutcomesPanel" triggerID="NonSaleOutcome"></hide>
+            <show element="NonSaleOutcomesPanel" triggerID="NonSaleOutcome"></show>
+        </Button>
+        <Button classes="btn-default btn-lg col-xs-2 col-xs-offset-9" id="ExitSalesOutcome" forPanel="SalesOutcomesRow4"
+                name="Back" state="">
+            <hide element="SalesOutcomesPanel" triggerID="ExitSalesOutcome"></hide>
+            <show element="CallOutcomesPanel" triggerID="ExitSalesOutcome"></show>
+        </Button>
+        <Button classes="btn-default btn-lg col-xs-2 col-xs-offset-9" id="ExitNonSalesOutcome"
+                forPanel="NonSaleOutcomesRow4" name="Back" state="">
+            <hide element="NonSaleOutcomesPanel" triggerID="ExitNonSalesOutcome"></hide>
+            <show element="CallOutcomesPanel" triggerID="ExitNonSalesOutcome"></show>
+        </Button>
+        <inputField classes="col-xs-4" forPanel="SalesOutcomesRow1" id="CreditAmount" prefix="Credit Amount"
+                    prefixClasses="col-xs-2" type="text"></inputField>
+        <inputField classes="col-xs-4" forPanel="SalesOutcomesRow1" id="PPTAmount" prefix="Promise to pay amount"
+                    prefixClasses="col-xs-2" type="text"></inputField>
+        <inputField classes="col-xs-4" forPanel="SalesOutcomesRow2" id="CollectedAmount" prefix="Collected amount"
+                    prefixClasses="col-xs-2" type="text"></inputField>
+        <Button classes="btn-default col-xs-4 outcome" id="PIF" forPanel="SalesOutcomesRow3" name="Payment In Full"
+                state="">
+            <registerOutcome message="Payment In Full" triggerID="PIF"></registerOutcome>
+        </Button>
+        <Button classes="btn-default col-xs-4 outcome" id="PP" forPanel="SalesOutcomesRow3" name="Part Payment"
+                state="">
+            <registerOutcome message="Part Payment" triggerID="PP"></registerOutcome>
+        </Button>
+        <Button classes="btn-default col-xs-4 outcome" id="PPPP" forPanel="SalesOutcomesRow3"
+                name="Part Payment and Promise to Pay" state="">
+            <registerOutcome message="Part Payment and Promise to Pay" triggerID="PPPP"></registerOutcome>
+        </Button>
+        <Button classes="btn-default col-xs-4 outcome" id="PPIP" forPanel="SalesOutcomesRow3"
+                name="Part Payment and Installment Plan" state="">
+            <registerOutcome message="Part Payment and Installment Plan" triggerID="PPIP"></registerOutcome>
+        </Button>
+        <Button classes="btn-default col-xs-4 outcome" id="FC" forPanel="SalesOutcomesRow3" name="Full Credit" state="">
+            <registerOutcome message="Full Credit" triggerID="FC"></registerOutcome>
+        </Button>
+        <Button classes="btn-default col-xs-4 outcome" id="PC" forPanel="SalesOutcomesRow3" name="Part Credit" state="">
+            <registerOutcome message="Part Credit" triggerID="PC"></registerOutcome>
+        </Button>
+        <Button classes="btn-default col-xs-4 outcome" id="PPPC" forPanel="SalesOutcomesRow3"
+                name="Part Payment / Part Credit" state="">
+            <registerOutcome message="Part Payment / Part Credit" triggerID="PPPC"></registerOutcome>
+        </Button>
+        <Button classes="btn-default btn-lg col-xs-4 outcome" id="TE" forPanel="NonSaleOutcomesRow1"
+                name="Too Expensive" state="">
+            <registerOutcome message="Too Expensive" triggerID="TE"></registerOutcome>
+        </Button>
+        <Button classes="btn-default btn-lg col-xs-4 outcome" id="FCHC" forPanel="NonSaleOutcomesRow1"
+                name="Financial Circumstances Have Changed" state="">
+            <registerOutcome message="Financial Circumstances Have Changed" triggerID="FCHC"></registerOutcome>
+        </Button>
+        <Button classes="btn-default btn-lg col-xs-4 outcome" id="NPD" forPanel="NonSaleOutcomesRow1" name="Not Pay Day"
+                state="">
+            <registerOutcome message="Not Pat Day" triggerID="NPD"></registerOutcome>
+        </Button>
+        <Button classes="btn-default btn-lg col-xs-4 outcome" id="CPO" forPanel="NonSaleOutcomesRow1"
+                name="Can't Pay Other">
+            <registerOutcome message="Can't Pay Other" triggerID="CPO"></registerOutcome>
+        </Button>
+        <Button classes="btn-default btn-lg col-xs-4 outcome" id="Complaint" forPanel="NonSaleOutcomesRow1"
+                name="Complaint" state="">
+            <registerOutcome message="Complaint" triggerID="Complaint"></registerOutcome>
+        </Button>
+        <Button classes="btn-default btn-lg col-xs-4 outcome" id="IBA" forPanel="NonSaleOutcomesRow1"
+                name="Incorrect Billed Amount" state="">
+            <registerOutcome message="Incorrect Billed Amount" triggerID="IBA"></registerOutcome>
+        </Button>
+        <Button classes="btn-default btn-lg col-xs-4 outcome" id="WPO" forPanel="NonSaleOutcomesRow1"
+                name="Won't Pay Other" state="">
+            <registerOutcome message="Won't Pay Other" triggerID="WPO"></registerOutcome>
+        </Button>
+        <Button classes="btn-default btn-lg col-xs-4 outcome" id="APIF" forPanel="NonSaleOutcomesRow1"
+                name="Already Paid In Full" state="">
+            <registerOutcome message="Already Paid In Full" triggerID="APIF"></registerOutcome>
+        </Button>
+        <Button classes="btn-default btn-lg col-xs-4 outcome" id="AP2PIP" forPanel="NonSaleOutcomesRow1"
+                name="Already P2P / IP" state="">
+            <registerOutcome message="Already P2P / IP" triggerID="AP2PIP"></registerOutcome>
+        </Button>
+        <Button classes="btn-default btn-lg col-xs-4 outcome" id="DMCC" forPanel="NonSaleOutcomesRow1"
+                name="DMC Callback" state="">
+            <registerOutcome message="DMC Callback" triggerID="DMCC"></registerOutcome>
+        </Button>
+        <Button classes="btn-default btn-lg col-xs-4 outcome" id="NDMCC" forPanel="NonSaleOutcomesRow1"
+                name="Non DMC Callback" state="">
+            <registerOutcome message="Non DMC Callback" triggerID="NDMCC"></registerOutcome>
+        </Button>
+        <Button classes="btn-default btn-lg col-xs-4 outcome" id="Answerphone" forPanel="NonSaleOutcomesRow1"
+                name="Answerphone" state="">
+            <registerOutcome message="Answerphone" triggerID="Answerphone"></registerOutcome>
+        </Button>
+        <Button classes="btn-default btn-lg col-xs-4 outcome" id="NA" forPanel="NonSaleOutcomesRow1" name="No Answer"
+                state="">
+            <registerOutcome message="No Answer" triggerID="NA"></registerOutcome>
+        </Button>
+        <datagrid classes="col-xs-12" forPanel="CommentsRow1" id="commentsGrid" prefix="" prefixClasses=""></datagrid>
+        <Button classes="col-xs-1 col-xs-offset-10" forPanel="CommentsRow2" id="ToScriptSelect" name="Back" state="">
+            <hide element="MainInformationPanel" triggerID="ToScriptSelect"></hide>
+            <hide element="CallOutcomesPanel" triggerID="ToScriptSelect"></hide>
+            <hide element="SalesOutcomesPanel" triggerID="ToScriptSelect"></hide>
+            <hide element="NonSaleOutcomesPanel" triggerID="ToScriptSelect"></hide>
+            <hide element="CommentsPanel" triggerID="ToScriptSelect"></hide>
+            <show element="ScriptSelectPanel" triggerID="ToScriptSelect"></show>
+        </Button>
+        <End></End>
+    </elements>
+</script>`

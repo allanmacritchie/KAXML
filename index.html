@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link href="css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="css/styles.css" rel="stylesheet"/>
+    <link href="css/classic.css" rel="stylesheet"/>
+    <link href="css/classic.date.css" rel="stylesheet"/>
+    <link href="css/classic.time.css" rel="stylesheet"/>
+    <link href="css/jsgrid.min.css" rel="stylesheet"/>
+    <link href="css/jsgrid-theme.min.css" rel="stylesheet"/>
+    <title>Logic in XML Proof of concept</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet"/>
+</head>
+<body class="container-fluid">
+<div id="Holding">
+    <h1 class="text-center">Welcome to Genius PPT Scripter <span class="halfSize">Redesigned</span></h1>
+    <button class="btn btn-lg btn-success" id="initiate">Take Call</button>
+</div>
+<header class="row">
+    <p class="row" id="agentDetails">
+        <!-- Agent details and status -->
+    </p>
+    <p class="row"><span class="col-xs-6 text-right" id="timerText">Time on current call:</span><span class="text-left"
+                                                                                                      id="Timer"></span>
+    </p>
+    <nav class="row" id="callControls">
+        <h2 class="text-center">Call Controls</h2>
+        <div class="row" id="callControl">
+            <!-- buttons for call controls -->
+        </div>
+    </nav>
+    <p id="User"></p>
+</header>
+<div class="headerSpacer"></div>
+<form class="row scriptPanels widthfix" id="scriptForm">
+    <main id="scriptPanels" class="row">
+        <!-- addition of script sections -->
+    </main>
+</form>
+<footer class="row">
+    <div class="miniText pull-right">
+        <div class="col-md-6">
+            <p>Allan MacRitchie - 06/09/2016 - @ 11:55</p>
+            <p>Current task - Testing KA xml code in Logic Engine</p>
+        </div>
+        <div class="col-md-6">
+            <p>Status Log;</p>
+            <p>Stage 1 - Complete</p>
+            <p>Stage 2 - Complete</p>
+            <p>Stage 3 - Complete</p>
+            <p>Stage 4 - Complete</p>
+            <p>Stage 5 - Complete</p>
+            <p>Stage 6 - Work on Logic engine In progress</p>
+            <p>Stage 7 (validation added) - Postponed</p>
+        </div>
+    </div>
+    <script src="javascript/jquery-3.1.0.min.js"></script>
+    <script src="javascript/bootstrap.min.js"></script>
+    <script src="javascript/Logic.js"></script>
+    <script src="javascript/jsgrid.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            logicEngine(triggerType = "initiatePanels");
+        })
+    </script>
+    <script>
+        $(document).ready(function () {
+            $(".btn").click(function (event) {
+                event.preventDefault();
+                logicEngine(triggerType = "buttontrigger", id = this.id)
+            })
+        })
+    </script>
+</footer>
+</body>
+</html>

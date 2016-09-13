@@ -1,0 +1,122 @@
+﻿body {
+    font-family: 'Roboto', serif;
+    font-size: 14px;
+}
+
+header {
+    background: #000;
+    color: #fff;
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+}
+
+/* classes */
+.btn {
+    white-space: normal;
+}
+
+.buttonRow {
+    padding: 5em;
+}
+
+.callControl {
+    height: 4em;
+}
+
+commentCell {
+    width: 50% !important;
+}
+
+controlCell {
+    width: 10% !important;
+}
+
+.dateCell {
+    width: 20% !important;
+}
+
+.error {
+    padding-left: 2.5em;
+    color: #900;
+    font-weight: 700;
+}
+
+.errorBorder {
+    border: 0.1em solid #900;
+}
+
+.halfSize {
+    font-size: 35%;
+}
+
+.headerSpacer {
+    height: 14em;
+}
+
+.lineSpacing {
+    margin-top: 0.25em;
+    margin-bottom: 0.25em;
+}
+
+.miniText {
+    font-size: 0.75em;
+    padding-right: 3em;
+}
+
+.noWrap {
+    white-space: nowrap;
+}
+
+.outcome {
+    height: 3.25em;
+}
+
+.panel {
+    border: solid 0.25em #808080;
+    padding: 2em;
+}
+
+.panelBordered {
+    border: solid 0.25em #f1f1f1;
+    border-radius: 1em;
+}
+
+.panelName {
+    display: block;
+    margin: 1em 2.5em;
+}
+
+.scriptPanels, #callControls {
+    border: solid 0.25em #f1f1f1;
+    border-radius: 1em;
+}
+
+userCell {
+    width: 10% !important;
+}
+
+.versionNumber {
+    font-size: 0.3em;
+    font-weight: 700;
+}
+
+.widthfix {
+    margin: 1.25em
+}
+
+/* Id's */
+#initiate {
+    margin: 0 46%;
+}
+
+#Holding {
+    width: 100%;
+    height: 100em;
+    padding: 20% 0;
+    display: block;
+}
+
+#scriptPanels {
+    margin: 0.25em;
+}
